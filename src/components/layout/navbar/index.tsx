@@ -21,6 +21,7 @@ import {
 	NavigationMenuItem,
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import { NAVBAR_TITLE } from "@/constants/constant";
 import Image from "next/image";
 import { ToggleTheme as ToggleThemeComponent } from "../toggle-theme";
 
@@ -105,19 +106,16 @@ export const Navbar = () => {
 			className={cn(
 				"sticky top-5 right-0 left-0 z-40 mx-auto flex w-[90%] items-center justify-between",
 				"rounded-2xl border border-secondary p-4",
-				"shadow-[0_0px_10px_rgb(0,0,0,0.2)] shadow-primary/30",
+				"shadow-[0_0px_4px_rgb(0,0,0,0.2)] shadow-primary/30",
 				"border-0 hover:shadow-primary/70",
 				"transition-all duration-500 ease-in-out",
 				"md:top-10 md:w-[70%] lg:w-[75%] lg:max-w-screen-xl",
 				"bg-white/50 saturate-150 backdrop-blur backdrop-contrast-125 dark:bg-black/50",
 			)}
 		>
-			<Link
-				className="flex items-center gap-4 px-2 font-extrabold text-xl"
-				href="/"
-			>
-				<Image src={"/logo.png"} alt="logo" width={24} height={24} />
-				Faiz Khan
+			<Link className="flex items-center gap-4 px-2 text-xl" href="/">
+				{/* <Image src={"/logo.png"} alt="logo" width={24} height={24} /> */}
+				{NAVBAR_TITLE}
 			</Link>
 
 			{/* <!-- Mobile --> */}
