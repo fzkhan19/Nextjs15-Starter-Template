@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { Navbar } from "@/components/layout/navbar";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -36,7 +37,10 @@ export default function RootLayout({
 						dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
 						type="application/ld+json"
 					/>
-					<Providers>{children}</Providers>
+					<Providers>
+						<Navbar />
+						{children}
+					</Providers>
 				</main>
 			</body>
 		</html>

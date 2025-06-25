@@ -189,8 +189,12 @@ export const Navbar = () => {
 			<CustomNavigationMenu />
 
 			<div className="hidden items-center lg:flex">
-				<Link className="mx-3" href={"/"}>
-					<Button className="w-full justify-start" size="sm" variant="ghost">
+				<Link href={"/"}>
+					<Button
+						className="w-full justify-start px-4 py-6 hover:bg-primary/30"
+						size="icon"
+						variant="ghost"
+					>
 						<Home className="size-5" />
 					</Button>
 				</Link>

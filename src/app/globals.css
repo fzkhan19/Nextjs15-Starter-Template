@@ -33,48 +33,58 @@ body {
 
 @layer base {
   :root {
-    --background: 247 50% 100%;
-    --foreground: 247 54% 0%;
-    --muted: 217 15% 93%;
-    --muted-foreground: 217 5% 26%;
-    --popover: 247 50% 100%;
-    --popover-foreground: 247 54% 0%;
-    --card: 247 50% 100%;
-    --card-foreground: 247 54% 0%;
-    --border: 247 7% 92%;
-    --input: 247 7% 92%;
-    --primary: 247 59% 77%;
-    --primary-foreground: 247 59% 17%;
-    --secondary: 217 59% 77%;
-    --secondary-foreground: 217 59% 17%;
-    --accent: 275 100% 41%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 16 81% 26%;
-    --destructive-foreground: 16 81% 86%;
-    --ring: 247 59% 77%;
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 47.9 95.8% 53.1%;
+    --primary-foreground: 26 83.3% 14.1%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 20 14.3% 4.1%;
+    --chart-1: 47.9 95.8% 53.1%;
+    --chart-2: 60 4.8% 95.9%;
+    --chart-3: 60 4.8% 95.9%;
+    --chart-4: 60 4.8% 98.9%;
+    --chart-5: 47.9 98.8% 53.1%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 247 47% 0%;
-    --foreground: 247 16% 98%;
-    --muted: 217 15% 7%;
-    --muted-foreground: 217 5% 74%;
-    --popover: 247 47% 0%;
-    --popover-foreground: 247 16% 98%;
-    --card: 247 47% 0%;
-    --card-foreground: 247 16% 98%;
-    --border: 247 7% 12%;
-    --input: 247 7% 12%;
-    --primary: 247 59% 77%;
-    --primary-foreground: 247 59% 17%;
-    --secondary: 217 59% 77%;
-    --secondary-foreground: 217 59% 17%;
-    --accent: 48 100% 65%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 16 81% 58%;
-    --destructive-foreground: 0 0% 0%;
-    --ring: 247 59% 77%;
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --primary: 47.9 95.8% 53.1%;
+    --primary-foreground: 26 83.3% 14.1%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 35.5 91.7% 32.9%;
+    --chart-1: 47.9 95.8% 53.1%;
+    --chart-2: 12 6.5% 15.1%;
+    --chart-3: 12 6.5% 15.1%;
+    --chart-4: 12 6.5% 18.1%;
+    --chart-5: 47.9 98.8% 53.1%;
   }
 }
 
@@ -85,78 +95,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
-
-h1 > a > .icon.icon-link:before,
-h2 > a > .icon.icon-link:before,
-h3 > a > .icon.icon-link:before {
-  content: "#";
-  font-size: 0.8rem;
-}
-
-h2 > a,
-h3 > a {
-  text-decoration: none !important;
-}
-
-code {
-  counter-reset: line;
-}
-
-code > [data-line]::before {
-  counter-increment: line;
-  content: counter(line);
-
-  /* Other styling */
-  display: inline-block;
-  width: 1rem;
-  margin-right: 2rem;
-  text-align: right;
-  color: gray;
-}
-
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
-  width: 2rem;
-}
-
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
-  width: 3rem;
-}
-
-[data-highlighted-line] {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  padding: 2px;
-  padding-left: 0;
-  padding-right: 4px;
-  border-radius: 2px;
-  border-left: 2px solid #7b00d3;
-}
-
-[data-highlighted-chars] {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  padding: 2px;
-  border-radius: 2px;
-}
-
-[data-rehype-pretty-code-fragment] {
-  position: relative;
-}
-
-[data-rehype-pretty-code-title] {
-  position: absolute;
-  right: 0;
-  background-color: #7b00d3;
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 1rem;
-  border-end-start-radius: 4px;
-}
-
-[data-rehype-pretty-code-caption] {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  text-align: center;
-  font-size: 1rem;
-  color: #747474;
 }
